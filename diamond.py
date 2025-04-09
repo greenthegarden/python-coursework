@@ -1,13 +1,15 @@
 n = int(input("Enter a number: "))
 rows = n * 2 - 1
+print("Diamond Pattern:")
 for i in range(1, rows + 1):
+    # Calculate spaces and stars for the current row
     if i <= n:
         spaces = n - i
         stars = 2 * i - 1
     else:
         spaces = i - n
         stars = 2 * (rows - i + 1) - 1
-
+    print(f"Row {i}: Spaces = {spaces}, Stars = {stars}")
     print(" " * spaces + "*" * stars)
 # This code generates a diamond pattern based on the input number.
 # The number of rows in the diamond is calculated as n * 2 - 1.
